@@ -1,9 +1,15 @@
-
 // #region Global-Variable-Declarations
 let pageUrls = {
     home: '/index.html',
     Services:'/index.html?Services'
 }
+// #endregion
+
+// #region OnStartUp-Function
+function OnStartUp(params) {
+    popStateHandler();
+}
+OnStartUp();
 // #endregion
 
 // #region Navlinks-Routing
@@ -40,7 +46,7 @@ function RenderServicesPage(params) {
 // #endregion
 
 // #region OnPopState-Handler
-window.onpopstate = (event) => {
+function popStateHandler(event) {
     loc = window.location.href.toString().split(window.location.host)[1];
 
     if (loc === pageUrls.Services){
@@ -50,4 +56,5 @@ window.onpopstate = (event) => {
         RenderHomePage();
     }
 }
+window.onpopstate = popStateHandler;
 // #endregion
