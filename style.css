@@ -2,6 +2,7 @@ html,body{
     background-color: rgb(238, 237, 237);
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
 }
 
 /* #region Header-Styles */
@@ -15,6 +16,8 @@ header{
     color: white;
 
     box-shadow: 0px 2px 4px 0px black;
+    -webkit-box-shadow: 0px 2px 4px 0px black;
+    -moz-box-shadow: 0px 2px 4px 0px black;
 }
 .Header-links-ul{
     flex-grow: 2;
@@ -26,8 +29,26 @@ header{
     padding: 0.4rem;
     border-radius: 2px;
     cursor: pointer;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
 .header-link:hover{
     border-bottom: 1px solid white;
+}
+/* #endregion */
+
+/* #region Content-Styling */
+main{
+    padding: 2rem;
+}
+.content-header{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.2em;
+}
+.text-box{
+    margin: 2rem;
+    padding: 0.5rem;
+    border: 1px solid black;
 }
 /* #endregion */
